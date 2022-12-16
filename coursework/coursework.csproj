@@ -1,0 +1,47 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Compile Remove="Views\images\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="Views\images\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Views\images\**" />
+      <None Include="wwwroot\slick\ajax-loader.gif" />
+      <None Include="wwwroot\slick\config.rb" />
+      <None Include="wwwroot\slick\fonts\slick.eot" />
+      <None Include="wwwroot\slick\fonts\slick.svg" />
+      <None Include="wwwroot\slick\fonts\slick.ttf" />
+      <None Include="wwwroot\slick\fonts\slick.woff" />
+      <None Include="wwwroot\slick\slick-theme.css" />
+      <None Include="wwwroot\slick\slick-theme.less" />
+      <None Include="wwwroot\slick\slick-theme.scss" />
+      <None Include="wwwroot\slick\slick.css" />
+      <None Include="wwwroot\slick\slick.js" />
+      <None Include="wwwroot\slick\slick.less" />
+      <None Include="wwwroot\slick\slick.min.js" />
+      <None Include="wwwroot\slick\slick.scss" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Remove="Views\images\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.AspNetCore.Authentication" Version="2.2.0" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.0.0" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.0.0">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
+      <PackageReference Include="System.Diagnostics.Tools" Version="4.3.0" />
+    </ItemGroup>
+
+</Project>

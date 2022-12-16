@@ -1,0 +1,53 @@
+@model List<Feedback>;
+
+
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Email and ID List</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: "Roboto", sans-serif;
+        }
+
+        .table-header {
+            background-color: #000000;
+            color: white;
+        }
+    </style>
+</head>
+<script>
+  var password = prompt("Enter password:");
+  if (password === "coursework") {
+    // Hide the page
+    document.body.style.display = "flex";
+  } else {
+    // Show error message
+    alert("Incorrect password!");
+    // redirect to index page
+    window.location.href = "/";
+    
+  }
+</script>
+
+<body style="display: none">
+    <h1>Email and ID List</h1>
+    <table class="table table-bordered">
+         @foreach (var item in Model)
+         {
+             <tr class="table-header">
+                 <th>ID</th>
+                 <th>Email</th>
+             </tr>
+             <tr>
+                 <td>@item.Id.ToString()</td>
+                 <td>@item.Email</td>
+             </tr>
+         }
+    </table>
+</body>
+</html>
